@@ -1,0 +1,2 @@
+insert into Coffee_Type(id, name, price, required_Beans, required_Milk) values (10001, 'Espresso', 25, 10, 0);
+insert into Coffee_Type(id, name, price, required_Beans, required_Milk) values (10002, 'Latte', 45, 10, 200);
