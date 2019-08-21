@@ -1,4 +1,5 @@
 language: java
 sudo: false
 
-script: "./mvnw clean package"
+script:
+  - mvn test -U -B
