@@ -11,8 +11,3 @@ addons:
     organization: 'jojoriveraa'
     token:
       secure: $SONAR_TOKEN
-
-script:
-  - mvn clean install -B
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jojoriveraa_spring-brew-coffee-service
