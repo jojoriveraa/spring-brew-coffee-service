@@ -2,3 +2,13 @@ language: java
 sudo: false
 jdk:
   - oraclejdk8
+
+addons:
+  sonarcloud:
+    organization: "jojoriveraa"
+    token:
+      secure: $sonar-key # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jojoriveraa_spring-brew-coffee-service
