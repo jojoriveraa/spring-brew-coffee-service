@@ -9,3 +9,6 @@ addons:
 scripts:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jojoriveraa_spring-brew-coffee-service
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
