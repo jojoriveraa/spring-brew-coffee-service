@@ -1,14 +1,14 @@
 language: java
 sudo: false
 jdk:
-  - oraclejdk9
-
+- oraclejdk9
 addons:
   sonarcloud:
-    organization: "jojoriveraa"
+    organization: jojoriveraa
     token:
-      secure: $sonar-key # encrypted value of your token
-
+      secure: "$sonar-key"
 script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jojoriveraa_spring-brew-coffee-service
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jojoriveraa_spring-brew-coffee-service
+env:
+  global:
+    secure: Vwo/dOOcDKn26ky/uxyzSIwbAg6n2Z9LmejQO37ix+whVM0uhNp/5sB2gKIz/agKTZy7BG33p+EDut4BS9S5iWoEYw8qcXCKTof3duY3UXJlMi6WRfFkvN8GkuXCXGriO+GnxxsK/E1vnXufZKhVYbL76r01AvK+rIXSAC4+LoXXIVm8jvzHP0X2wwY+o/WTFNWhBLQQEWBhyjuGCfV8YkFxyZI2VEwdzcp9ceYpO/7oU6NixovpqOsa3MxopBtIXf7l6AiAJjMuKMNnZcqCIYuuc/lahUH4IdfmSzKRE5bvFGm3l9/OCgTjUOgyg8R1yw+QhjaXql8y5FJ2y+SYJYEsugwgrG+1B2sJVXs+xoHtLJyBj7demiYLK9t3F72BlbWqI6k/tNAjlukcXgHrXfIfvnmUdmLwUkGcUzKVCPRDe/1X84NNSxgMALppG7lELJSTYhD1FTzexJU4XHM5V/KCq5yfkb9ULJBk5dpwTxJmCpaunwK9RQhYzlhlSCcuW4HeaSCBHXSmYcXWW2C9eQH0EJorf/g/aatKuu0ZU99n1euvVfS9BrnBM5U25MeBw69RqhF2EcXakk7C7ziruEc+DvkLyIvz5YLqiK+I6HHpfTUGUyOtbWVPhKqsdUxge5kHnbQGonOkVVWwdMx87ZUpEDrpZKSA33of1zz7OHw=
