@@ -1,12 +1,3 @@
-dist: trusty
-
-addons:
-  sonarcloud:
-    organization: 'jojoriveraa'
-    token:
-      secure: 'FenARt855bcRwT5AWd9QimyEjmV0H9bFC4H79qKeWC3wDjjuiFI3nd3VWU99tCaoWOY9YeeykpqVu0Z9WE3uNbXFiDz5kQe7f1va04RTWNJnvtzuZUvee/Jb5wck1PRAzNjxvlexy3AiCeZ32nAYXynYrahjeMAop7M72B+ZL9as8nVOykMOZsgi2RENE35t5Z5X/VvnMtEN19RROgucRIFsLCIEaXacrBZKxF68Gw9X4SqKh3Gh/zzNf6ogwfCwVeE0YYEevfi73um6+JAe8y6lqbC8j0tAWzsAu8c+3A2htdcN+VJDUfUu+MDN0DJ6jsuKOedsHV9XKa++Zq5bJv5UYqJuZ6idSKWjcwyx91UdtDJaYKPWngMSTGaEPi5hsMeExxDkoYmhsX6y4s/9y0Om+iedfr8JKf9KdeUAVokgjeIXtbWVBN7/VWZz3xTaxHS4e49kvua6XxWQCFWO4KlhNIdVB7iIPGK/SDP6NV2kPGUUKRTDuWfpPRnaF4u9thb9qTBJLw//BEsHbv4mxOgTvl/LyEJnyhYq63VSaBx3Q2xebULDASFNv6YVikVFBaIcH71N6tTsxDzQvn4XbEPY4g8USId/E11zOkZT4qgt237dgN+Q07TZNiUWjCRU4iqObZ/CjQozPpd+2D9LvKckFQNZc3diVHjdK+IoZPg='
-
-scripts:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean package -B
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jojoriveraa_spring-brew-coffee-service
+language: java
+jdk:
+ - oraclejdk8
