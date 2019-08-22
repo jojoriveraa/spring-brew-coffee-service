@@ -1,13 +1,17 @@
 dist: trusty
+sudo: false
+install: true
+
 language: java
 jdk:
-  - openjdk11
-
+  - oraclejdk8
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   
 addons:
   sonarcloud:
     organization: 'jojoriveraa'
-    token:
-      secure: $SONAR_TOKEN
+
+script:
+  # JaCoCo is used to have code coverage, "-Pcoverage" activates the maven profile in the pom.xml
+  - mvn clean verify sonar:sonar -Dsonar.login=${SONAR_TOKEN} -Dsonar.projectKey=jojoriveraa_spring-brew-coffee-service
