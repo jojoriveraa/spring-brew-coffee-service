@@ -25,9 +25,6 @@
 		<jackson.version>2.10.0.pr1</jackson.version>
 		<h2.version>1.4.199</h2.version>
 
-		<!-- jacoco -->
-		<jacoco.execution.file>${project.build.directory}/coverage-reports/jacoco.exec</jacoco.execution.file>
-		
 		<!-- sonar's exclusions-->
 		<sonar.coverage.exclusions>**/brewcoffeeservice/BrewCoffeeServiceApplication.java</sonar.coverage.exclusions>
 	</properties>
@@ -68,47 +65,24 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.4</version>
-				<configuration>
-					<outputDirectory>${project.build.directory}/coverage-reports/jacoco</outputDirectory>
-				</configuration>
+				<version>0.8.2</version>
 				<executions>
 					<execution>
-						<id>default-prepare-agent</id>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
 					<execution>
-						<id>default-report</id>
-						<phase>prepare-package</phase>
+						<id>report</id>
+						<phase>test</phase>
 						<goals>
 							<goal>report</goal>
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.3</version>
-				<configuration>
-					<localCheckout>true</localCheckout>					<!-- must be true -->
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<doclint>all,-missing</doclint>
-				</configuration>
 			</plugin>
 		</plugins>
 
