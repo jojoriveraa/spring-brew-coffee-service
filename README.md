@@ -1,4 +1,11 @@
-# spring-brew-coffee-service
+# spring-brew-coffee-service 
+
+[![Build Status](https://travis-ci.com/jojoriveraa/giftgiver.svg?branch=master)](https://travis-ci.com/jojoriveraa/giftgiver)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jojoriveraa_spring-brew-coffee-service&metric=alert_status)](https://sonarcloud.io/dashboard?id=jojoriveraa_spring-brew-coffee-service)
+[![codecov](https://codecov.io/gh/jojoriveraa/spring-brew-coffee-service/branch/master/graph/badge.svg)](https://codecov.io/gh/jojoriveraa/spring-brew-coffee-service)
+[![DepShield Badge](https://depshield.sonatype.org/badges/jojoriveraa/spring-brew-coffee-service/depshield.svg)](https://depshield.github.io)
+
+
 
 This project was bootstrapped with spring-boot
 
