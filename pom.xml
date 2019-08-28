@@ -24,6 +24,7 @@
 		<!-- SOLVE DEPENDENCY SECURITY ISSUES -->
 		<jackson.version>2.10.0.pr1</jackson.version>
 		<h2.version>1.4.199</h2.version>
+		<dom4j.version>2.1.1</dom4j.version>
 
 		<!-- sonar's exclusions-->
 		<sonar.coverage.exclusions>**/brewcoffeeservice/BrewCoffeeServiceApplication.java</sonar.coverage.exclusions>
