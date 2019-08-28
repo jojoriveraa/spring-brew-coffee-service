@@ -1,4 +1,9 @@
-# spring-brew-coffee-service
+# spring-brew-coffee-service 
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jojoriveraa_spring-brew-coffee-service&metric=alert_status)](https://sonarcloud.io/dashboard?id=jojoriveraa_spring-brew-coffee-service)
+[![codecov](https://codecov.io/gh/jojoriveraa/spring-brew-coffee-service/branch/master/graph/badge.svg)](https://codecov.io/gh/jojoriveraa/spring-brew-coffee-service)
+
+
 
 This project was bootstrapped with spring-boot
 
